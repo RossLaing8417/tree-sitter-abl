@@ -4876,6 +4876,10 @@
                 },
                 {
                   "type": "SYMBOL",
+                  "name": "call_statement"
+                },
+                {
+                  "type": "SYMBOL",
                   "name": "case_statement"
                 },
                 {
@@ -5849,6 +5853,36 @@
               "type": "BLANK"
             }
           ]
+        }
+      ]
+    },
+    "call_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "call"
+              },
+              {
+                "type": "STRING",
+                "value": "CALL"
+              }
+            ]
+          },
+          "named": false,
+          "value": "CALL"
+        },
+        {
+          "type": "REPEAT1",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_primary_expression"
+          }
         }
       ]
     },

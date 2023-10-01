@@ -477,6 +477,7 @@ module.exports = grammar({
             $.buffer_compare_statement,
             $.buffer_copy_statement,
 
+            $.call_statement,
             $.case_statement,
             $.compile_statement,
 
@@ -586,6 +587,8 @@ module.exports = grammar({
         optional(kw("NO-LOBS")),
         optional(kw("NO-ERROR")),
       ),
+
+    call_statement: $ => seq(kw("CALL"), repeat1($._primary_expression)),
 
     case_statement: $ =>
       seq(

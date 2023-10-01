@@ -226,6 +226,7 @@
   "IN"
   "NO-LOBS"
   "BUFFER-COPY"
+  "CALL"
   "CASE"
   "END"
   "COMPILE"
