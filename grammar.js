@@ -429,6 +429,7 @@ module.exports = grammar({
             kw("BUFFER-PARTITION-ID"),
             kw("BUFFER-TENANT-ID"),
             kw("BUFFER-TENANT-NAME"),
+            kw("CAN-DO"),
             kw("ENTRY"),
             kw("FILL"),
             kw("INDEX"),

@@ -4504,6 +4504,24 @@
                   "members": [
                     {
                       "type": "STRING",
+                      "value": "can-do"
+                    },
+                    {
+                      "type": "STRING",
+                      "value": "CAN-DO"
+                    }
+                  ]
+                },
+                "named": false,
+                "value": "CAN-DO"
+              },
+              {
+                "type": "ALIAS",
+                "content": {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "STRING",
                       "value": "entry"
                     },
                     {
