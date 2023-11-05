@@ -432,6 +432,7 @@ module.exports = grammar({
             kw("CAN-DO"),
             kw("CAN-QUERY"),
             kw("CAN-SET"),
+            kw("CAPS"),
             kw("ENTRY"),
             kw("FILL"),
             kw("INDEX"),

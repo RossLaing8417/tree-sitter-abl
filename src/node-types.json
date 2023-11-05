@@ -2921,6 +2921,10 @@
     "named": false
   },
   {
+    "type": "CAPS",
+    "named": false
+  },
+  {
     "type": "CASE",
     "named": false
   },

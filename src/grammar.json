@@ -4554,6 +4554,24 @@
                   "members": [
                     {
                       "type": "STRING",
+                      "value": "caps"
+                    },
+                    {
+                      "type": "STRING",
+                      "value": "CAPS"
+                    }
+                  ]
+                },
+                "named": false,
+                "value": "CAPS"
+              },
+              {
+                "type": "ALIAS",
+                "content": {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "STRING",
                       "value": "entry"
                     },
                     {

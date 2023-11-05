@@ -194,6 +194,7 @@
   "CAN-DO"
   "CAN-QUERY"
   "CAN-SET"
+  "CAPS"
   "ENTRY"
   "FILL"
   "INDEX"
