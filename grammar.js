@@ -88,7 +88,7 @@ module.exports = grammar({
     // Types
     //
 
-    primitive_type: $ =>
+    primitive_type: _ =>
       choice(
         kw("BLOB"),
         kw("CHARACTER"),
@@ -116,7 +116,7 @@ module.exports = grammar({
 
     _expression: $ =>
       choice(
-        $.assignment_expression,
+        // $.assignment_expression,
         $.binary_expression,
         $.if_expression,
         $._primary_expression,
@@ -242,7 +242,7 @@ module.exports = grammar({
     // System Handles
     //
 
-    system_handle: $ =>
+    system_handle: _ =>
       choice(
         kw("SELF"),
         kw("SESSION"),
@@ -252,7 +252,7 @@ module.exports = grammar({
         kw("THIS-PROCEDURE"),
       ),
 
-    system_handle_attribute: $ =>
+    system_handle_attribute: _ =>
       choice(
         // Procedure handle attributes
         kw("ADM-DATA"),
@@ -377,7 +377,7 @@ module.exports = grammar({
         kw("TEMP-DIRECTORY"),
       ),
 
-    system_handle_method: $ =>
+    system_handle_method: _ =>
       choice(
         // Procedure handle methods
         kw("ADD-SUPER-PROCEDURE"),
@@ -449,7 +449,7 @@ module.exports = grammar({
         ),
       ),
 
-    _keyword_function: $ => prec.left(choice(kw("TODAY"), kw("USERID"))),
+    _keyword_function: _ => prec.left(choice(kw("TODAY"), kw("USERID"))),
 
     _statement_function: $ =>
       choice(
@@ -459,7 +459,45 @@ module.exports = grammar({
       ),
 
     builtin_function: $ =>
-      choice($._function, $._keyword_function, $._statement_function),
+      choice(
+        $._function,
+        $._keyword_function,
+        $._statement_function,
+        $._canfind_function,
+      ),
+
+    _canfind_function: $ =>
+      seq(
+        kw("CAN-FIND"),
+        "(",
+        optional(choice(kw("FIRST"), kw("LAST"))),
+        $.identifier,
+        optional($._literal),
+        repeat(
+          choice(
+            seq(kw("OF"), $.identifier),
+            $._where_clause,
+            $._useindex_clause,
+            seq(
+              kw("USING"),
+              optional(seq(kw("FRAME"), $.identifier)),
+              $.identifier,
+              repeat(
+                seq(
+                  kw("AND"),
+                  kw("USING"),
+                  optional(seq(kw("FRAME"), $.identifier)),
+                  $.identifier,
+                ),
+              ),
+            ),
+            $._record_lock,
+            kw("NO-WAIT"),
+            kw("NO-PREFETCH"),
+          ),
+        ),
+        ")",
+      ),
 
     //
     // Statements
@@ -489,7 +527,7 @@ module.exports = grammar({
             $.do_statement,
 
             $.error_level_statement,
-            alias($._expression, $.expression_statement),
+            $.expression_statement,
 
             $.procedure_statement,
 
@@ -548,7 +586,7 @@ module.exports = grammar({
         optional(seq(kw("TO"), $._widget_phrase)),
       ),
 
-    bell_statement: $ => kw("BELL"),
+    bell_statement: _ => kw("BELL"),
 
     buffer_compare_statement: $ =>
       seq(
@@ -633,7 +671,7 @@ module.exports = grammar({
         ),
       ),
 
-    _save_spec: $ => seq(kw("SAVE"), kw("FALSE")),
+    _save_spec: _ => seq(kw("SAVE"), kw("FALSE")),
 
     _define_statement: $ =>
       seq(
@@ -693,7 +731,7 @@ module.exports = grammar({
         anyOf($._serialize_name, kw("NO-UNDO")),
       ),
 
-    error_level_statement: $ =>
+    error_level_statement: _ =>
       seq(
         choice(kw("BLOCK-LEVEL"), kw("ROUTINE-LEVEL")),
         kw("ON"),
@@ -702,6 +740,8 @@ module.exports = grammar({
         ",",
         kw("THROW"),
       ),
+
+    expression_statement: $ => choice($._expression, $.assignment_expression),
 
     do_statement: $ =>
       seq(
@@ -725,7 +765,7 @@ module.exports = grammar({
         optional(kw("PROCEDURE")),
       ),
 
-    quit_statement: $ => kw("QUIT"),
+    quit_statement: _ => kw("QUIT"),
 
     run_statement: $ =>
       seq(
@@ -807,7 +847,7 @@ module.exports = grammar({
 
     preprocessor_directive: $ => choice($.analyze_suspend),
 
-    analyze_suspend: $ => seq(kw("&ANALYZE-SUSPEND"), /[^\n]*/),
+    analyze_suspend: _ => seq(kw("&ANALYZE-SUSPEND"), /[^\n]*/),
 
     //
     // Helpers
@@ -849,14 +889,14 @@ module.exports = grammar({
         optional(seq(kw("EXTENT"), $.integer_literal)),
       ),
 
-    _new_global_shared: $ =>
+    _new_global_shared: _ =>
       seq(optional(seq(kw("NEW"), optional(kw("GLOBAL")))), kw("SHARED")),
 
-    _access_mode: $ => choice(kw("PRIVATE"), kw("PROTECTED"), kw("PUBLIC")),
+    _access_mode: _ => choice(kw("PRIVATE"), kw("PROTECTED"), kw("PUBLIC")),
 
-    _serializable: $ => choice(kw("SERIALIZABLE"), kw("NON-SERIALIZABLE")),
+    _serializable: _ => choice(kw("SERIALIZABLE"), kw("NON-SERIALIZABLE")),
 
-    _case_sensitive: $ => seq(optional(kw("NOT")), kw("CASE-SENSITIVE")),
+    _case_sensitive: _ => seq(optional(kw("NOT")), kw("CASE-SENSITIVE")),
     _column_label: $ => seq(kw("COLUMN-LABEL"), $.character_literal),
     _decimals: $ => seq(kw("DECIMALS"), $.integer_literal),
     _format: $ => seq(kw("FORMAT"), $.character_literal),
@@ -873,7 +913,11 @@ module.exports = grammar({
 
     _value: $ => seq(kw("VALUE"), "(", $._expression, ")"),
 
+    _record_lock: _ =>
+      choice(kw("NO-LOCK"), kw("SHARE-LOCK"), kw("EXCLUSIVE-LOCK")),
     _where_clause: $ => seq(kw("WHERE"), $._expression),
+    _useindex_clause: $ => seq(kw("USE-INDEX"), $.identifier),
+
     _widget_phrase: $ =>
       choice(
         seq(kw("FRAME"), $.identifier),

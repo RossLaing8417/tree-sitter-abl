@@ -12,10 +12,6 @@
           "named": true
         },
         {
-          "type": "assignment_expression",
-          "named": true
-        },
-        {
           "type": "binary_expression",
           "named": true
         },
@@ -92,10 +88,6 @@
       "types": [
         {
           "type": "array_access",
-          "named": true
-        },
-        {
-          "type": "assignment_expression",
           "named": true
         },
         {
@@ -250,10 +242,6 @@
           "named": true
         },
         {
-          "type": "assignment_expression",
-          "named": true
-        },
-        {
           "type": "binary_expression",
           "named": true
         },
@@ -330,10 +318,6 @@
       "types": [
         {
           "type": "array_access",
-          "named": true
-        },
-        {
-          "type": "assignment_expression",
           "named": true
         },
         {
@@ -499,10 +483,6 @@
           "named": true
         },
         {
-          "type": "assignment_expression",
-          "named": true
-        },
-        {
           "type": "binary_expression",
           "named": true
         },
@@ -584,10 +564,6 @@
       "types": [
         {
           "type": "array_access",
-          "named": true
-        },
-        {
-          "type": "assignment_expression",
           "named": true
         },
         {
@@ -772,6 +748,10 @@
           "named": true
         },
         {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
           "type": "builtin_function",
           "named": true
         },
@@ -789,6 +769,10 @@
         },
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "if_expression",
           "named": true
         },
         {
@@ -817,6 +801,10 @@
         },
         {
           "type": "true",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
           "named": true
         },
         {
@@ -919,10 +907,6 @@
         },
         {
           "type": "assign_statement",
-          "named": true
-        },
-        {
-          "type": "assignment_expression",
           "named": true
         },
         {
@@ -1113,10 +1097,6 @@
           "named": true
         },
         {
-          "type": "assignment_expression",
-          "named": true
-        },
-        {
           "type": "binary_expression",
           "named": true
         },
@@ -1298,10 +1278,6 @@
         },
         {
           "type": "assign_statement",
-          "named": true
-        },
-        {
-          "type": "assignment_expression",
           "named": true
         },
         {
@@ -1586,10 +1562,6 @@
           "named": true
         },
         {
-          "type": "assignment_expression",
-          "named": true
-        },
-        {
           "type": "bell_statement",
           "named": true
         },
@@ -1773,10 +1745,6 @@
       "types": [
         {
           "type": "array_access",
-          "named": true
-        },
-        {
-          "type": "assignment_expression",
           "named": true
         },
         {
@@ -2138,10 +2106,6 @@
           "named": true
         },
         {
-          "type": "assignment_expression",
-          "named": true
-        },
-        {
           "type": "binary_expression",
           "named": true
         },
@@ -2356,10 +2320,6 @@
           "named": true
         },
         {
-          "type": "assignment_expression",
-          "named": true
-        },
-        {
           "type": "binary_expression",
           "named": true
         },
@@ -2436,10 +2396,6 @@
       "types": [
         {
           "type": "array_access",
-          "named": true
-        },
-        {
-          "type": "assignment_expression",
           "named": true
         },
         {
@@ -2552,10 +2508,6 @@
           "named": true
         },
         {
-          "type": "assignment_expression",
-          "named": true
-        },
-        {
           "type": "binary_expression",
           "named": true
         },
@@ -2655,10 +2607,6 @@
       "types": [
         {
           "type": "array_access",
-          "named": true
-        },
-        {
-          "type": "assignment_expression",
           "named": true
         },
         {
@@ -2961,6 +2909,10 @@
     "named": false
   },
   {
+    "type": "CAN-FIND",
+    "named": false
+  },
+  {
     "type": "CASE",
     "named": false
   },
@@ -3145,6 +3097,10 @@
     "named": false
   },
   {
+    "type": "EXCLUSIVE-LOCK",
+    "named": false
+  },
+  {
     "type": "EXECUTION-LOG",
     "named": false
   },
@@ -3170,6 +3126,10 @@
   },
   {
     "type": "FILL",
+    "named": false
+  },
+  {
+    "type": "FIRST",
     "named": false
   },
   {
@@ -3341,6 +3301,10 @@
     "named": false
   },
   {
+    "type": "LAST",
+    "named": false
+  },
+  {
     "type": "LAST-CHILD",
     "named": false
   },
@@ -3457,7 +3421,19 @@
     "named": false
   },
   {
+    "type": "NO-LOCK",
+    "named": false
+  },
+  {
+    "type": "NO-PREFETCH",
+    "named": false
+  },
+  {
     "type": "NO-UNDO",
+    "named": false
+  },
+  {
+    "type": "NO-WAIT",
     "named": false
   },
   {
@@ -3697,6 +3673,10 @@
     "named": false
   },
   {
+    "type": "SHARE-LOCK",
+    "named": false
+  },
+  {
     "type": "SHARED",
     "named": false
   },
@@ -3854,6 +3834,10 @@
   },
   {
     "type": "USE",
+    "named": false
+  },
+  {
+    "type": "USE-INDEX",
     "named": false
   },
   {

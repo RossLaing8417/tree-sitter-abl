@@ -185,6 +185,42 @@ ASSIGN
           (identifier))))))
 
 ================================================================================
+Can-find
+================================================================================
+
+ASSIGN
+  result = CAN-FIND(FIRST table_name NO-LOCK
+                    WHERE table_name.field_name = 123)
+  result = CAN-FIND(table_name 123)
+  result = CAN-FIND(LAST table_name
+                    USING field_1
+                    AND USING FRAME f field_2).
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (assign_statement
+    (assignment_expression
+      (identifier)
+      (builtin_function
+        (identifier)
+        (binary_expression
+          (identifier)
+          (integer_literal))))
+    (assignment_expression
+      (identifier)
+      (builtin_function
+        (identifier)
+        (integer_literal)))
+    (assignment_expression
+      (identifier)
+      (builtin_function
+        (identifier)
+        (identifier)
+        (identifier)
+        (identifier)))))
+
+================================================================================
 Entry
 ================================================================================
 
