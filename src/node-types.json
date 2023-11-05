@@ -946,6 +946,10 @@
           "named": true
         },
         {
+          "type": "class_statement",
+          "named": true
+        },
+        {
           "type": "compile_statement",
           "named": true
         },
@@ -1117,6 +1121,10 @@
           "named": true
         },
         {
+          "type": "class_statement",
+          "named": true
+        },
+        {
           "type": "compile_statement",
           "named": true
         },
@@ -1210,6 +1218,21 @@
     "type": "character_modifier",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "class_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "compile_statement",
@@ -1441,6 +1464,10 @@
         },
         {
           "type": "character_literal",
+          "named": true
+        },
+        {
+          "type": "class_statement",
           "named": true
         },
         {
@@ -1729,6 +1756,10 @@
           "named": true
         },
         {
+          "type": "class_statement",
+          "named": true
+        },
+        {
           "type": "compile_statement",
           "named": true
         },
@@ -2000,6 +2031,10 @@
         },
         {
           "type": "catch_statement",
+          "named": true
+        },
+        {
+          "type": "class_statement",
           "named": true
         },
         {
@@ -2357,6 +2392,10 @@
         },
         {
           "type": "catch_statement",
+          "named": true
+        },
+        {
+          "type": "class_statement",
           "named": true
         },
         {
@@ -2896,6 +2935,10 @@
     "named": false
   },
   {
+    "type": "ABSTRACT",
+    "named": false
+  },
+  {
     "type": "ACCUMULATE",
     "named": false
   },
@@ -3296,6 +3339,10 @@
     "named": false
   },
   {
+    "type": "FINAL",
+    "named": false
+  },
+  {
     "type": "FIRST",
     "named": false
   },
@@ -3416,6 +3463,10 @@
     "named": false
   },
   {
+    "type": "IMPLEMENTS",
+    "named": false
+  },
+  {
     "type": "IN",
     "named": false
   },
@@ -3429,6 +3480,10 @@
   },
   {
     "type": "INHERIT-FGCOLOR",
+    "named": false
+  },
+  {
+    "type": "INHERITS",
     "named": false
   },
   {
@@ -4005,6 +4060,10 @@
   },
   {
     "type": "USE-INDEX",
+    "named": false
+  },
+  {
+    "type": "USE-WIDGET-POOL",
     "named": false
   },
   {

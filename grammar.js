@@ -525,6 +525,7 @@ module.exports = grammar({
             $.case_statement,
             $.catch_statement,
             // TODO: $.choose_statement,
+            $.class_statement,
             $.compile_statement,
 
             $.define_buffer_statement,
@@ -665,6 +666,21 @@ module.exports = grammar({
       ),
 
     // TODO: choose_statement: $ => seq(kw("CHOOSE")),
+
+    class_statement: $ =>
+      seq(
+        kw("CLASS"),
+        $.identifier,
+        optional(seq(kw("INHERITS"), $.identifier)),
+        optional(seq(kw("IMPLEMENTS"), commaSep1($.identifier))),
+        optional(kw("USE-WIDGET-POOL")),
+        optional(choice(kw("ABSTRACT"), kw("FINAL"))),
+        optional(kw("SERIALIZABLE")),
+        $._statement_colon,
+        // TODO Class body repeat(choice(...)),
+        kw("END"),
+        optional(kw("CLASS")),
+      ),
 
     compile_statement: $ =>
       seq(
