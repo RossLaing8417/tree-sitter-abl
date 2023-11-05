@@ -6332,22 +6332,30 @@
           "value": "END"
         },
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "STRING",
-                "value": "case"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "ALIAS",
+              "content": {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": "case"
+                  },
+                  {
+                    "type": "STRING",
+                    "value": "CASE"
+                  }
+                ]
               },
-              {
-                "type": "STRING",
-                "value": "CASE"
-              }
-            ]
-          },
-          "named": false,
-          "value": "CASE"
+              "named": false,
+              "value": "CASE"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         }
       ]
     },

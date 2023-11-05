@@ -639,7 +639,7 @@ module.exports = grammar({
         $._statement_colon,
         repeat1($._when_spec),
         kw("END"),
-        kw("CASE"),
+        optional(kw("CASE")),
       ),
 
     _when_spec: $ =>

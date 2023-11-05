@@ -28,3 +28,29 @@ END CASE.
         (assignment_expression
           (identifier)
           (integer_literal))))))
+
+================================================================================
+Somewhat Sketchy Case Statement
+================================================================================
+
+CASE TRUE:
+  WHEN 1 = 2 THEN DO: END.
+  WHEN obj:method() = "value" THEN DO: END.
+END.
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (case_statement
+    (true)
+    (binary_expression
+      (integer_literal)
+      (integer_literal))
+    (do_statement)
+    (binary_expression
+      (reference_method
+        (identifier)
+        (identifier)
+        (argument_list))
+      (character_literal))
+    (do_statement)))
