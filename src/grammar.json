@@ -5298,6 +5298,10 @@
                 },
                 {
                   "type": "SYMBOL",
+                  "name": "catch_statement"
+                },
+                {
+                  "type": "SYMBOL",
                   "name": "compile_statement"
                 },
                 {
@@ -6486,6 +6490,111 @@
         {
           "type": "SYMBOL",
           "name": "_statement"
+        }
+      ]
+    },
+    "catch_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "catch"
+              },
+              {
+                "type": "STRING",
+                "value": "CATCH"
+              }
+            ]
+          },
+          "named": false,
+          "value": "CATCH"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "as"
+              },
+              {
+                "type": "STRING",
+                "value": "AS"
+              }
+            ]
+          },
+          "named": false,
+          "value": "AS"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "ALIAS",
+              "content": {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": "class"
+                  },
+                  {
+                    "type": "STRING",
+                    "value": "CLASS"
+                  }
+                ]
+              },
+              "named": false,
+              "value": "CLASS"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_code_block"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "ALIAS",
+              "content": {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": "catch"
+                  },
+                  {
+                    "type": "STRING",
+                    "value": "CATCH"
+                  }
+                ]
+              },
+              "named": false,
+              "value": "CATCH"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         }
       ]
     },

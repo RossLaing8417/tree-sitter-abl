@@ -938,6 +938,10 @@
           "named": true
         },
         {
+          "type": "catch_statement",
+          "named": true
+        },
+        {
           "type": "character_literal",
           "named": true
         },
@@ -1035,6 +1039,129 @@
         },
         {
           "type": "unknown_literal",
+          "named": true
+        },
+        {
+          "type": "use_statement",
+          "named": true
+        },
+        {
+          "type": "using_statement",
+          "named": true
+        },
+        {
+          "type": "validate_statement",
+          "named": true
+        },
+        {
+          "type": "var_statement",
+          "named": true
+        },
+        {
+          "type": "view_statement",
+          "named": true
+        },
+        {
+          "type": "wait_for_statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "catch_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "accumulate_statement",
+          "named": true
+        },
+        {
+          "type": "aggregate_statement",
+          "named": true
+        },
+        {
+          "type": "apply_statement",
+          "named": true
+        },
+        {
+          "type": "assign_statement",
+          "named": true
+        },
+        {
+          "type": "bell_statement",
+          "named": true
+        },
+        {
+          "type": "buffer_compare_statement",
+          "named": true
+        },
+        {
+          "type": "buffer_copy_statement",
+          "named": true
+        },
+        {
+          "type": "call_statement",
+          "named": true
+        },
+        {
+          "type": "case_statement",
+          "named": true
+        },
+        {
+          "type": "catch_statement",
+          "named": true
+        },
+        {
+          "type": "compile_statement",
+          "named": true
+        },
+        {
+          "type": "define_buffer_statement",
+          "named": true
+        },
+        {
+          "type": "define_parameter_statement",
+          "named": true
+        },
+        {
+          "type": "define_variable_statement",
+          "named": true
+        },
+        {
+          "type": "do_statement",
+          "named": true
+        },
+        {
+          "type": "empty_statement",
+          "named": true
+        },
+        {
+          "type": "error_level_statement",
+          "named": true
+        },
+        {
+          "type": "expression_statement",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "procedure_statement",
+          "named": true
+        },
+        {
+          "type": "quit_statement",
+          "named": true
+        },
+        {
+          "type": "run_statement",
           "named": true
         },
         {
@@ -1306,6 +1433,10 @@
         },
         {
           "type": "case_statement",
+          "named": true
+        },
+        {
+          "type": "catch_statement",
           "named": true
         },
         {
@@ -1590,6 +1721,10 @@
           "named": true
         },
         {
+          "type": "catch_statement",
+          "named": true
+        },
+        {
           "type": "character_literal",
           "named": true
         },
@@ -1861,6 +1996,10 @@
         },
         {
           "type": "case_statement",
+          "named": true
+        },
+        {
+          "type": "catch_statement",
           "named": true
         },
         {
@@ -2214,6 +2353,10 @@
         },
         {
           "type": "case_statement",
+          "named": true
+        },
+        {
+          "type": "catch_statement",
           "named": true
         },
         {
@@ -2934,6 +3077,10 @@
   },
   {
     "type": "CAST",
+    "named": false
+  },
+  {
+    "type": "CATCH",
     "named": false
   },
   {

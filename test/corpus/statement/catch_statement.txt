@@ -1,0 +1,19 @@
+================================================================================
+Catch Statement
+================================================================================
+
+CATCH err AS Progress.Lang.Error:
+  err:toString().
+END CATCH.
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (catch_statement
+    (identifier)
+    (identifier)
+    (expression_statement
+      (reference_method
+        (identifier)
+        (identifier)
+        (argument_list)))))

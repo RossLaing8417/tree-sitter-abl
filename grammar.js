@@ -522,6 +522,7 @@ module.exports = grammar({
 
             $.call_statement,
             $.case_statement,
+            $.catch_statement,
             $.compile_statement,
 
             $.define_buffer_statement,
@@ -648,6 +649,17 @@ module.exports = grammar({
         sep1(seq(kw("WHEN"), $._expression), kw("OR")),
         kw("THEN"),
         $._statement,
+      ),
+
+    catch_statement: $ =>
+      seq(
+        kw("CATCH"),
+        $.identifier,
+        kw("AS"),
+        optional(kw("CLASS")),
+        $.identifier,
+        $._code_block,
+        optional(kw("CATCH")),
       ),
 
     compile_statement: $ =>
