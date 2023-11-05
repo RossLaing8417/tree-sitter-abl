@@ -4518,6 +4518,24 @@
                   "members": [
                     {
                       "type": "STRING",
+                      "value": "can-query"
+                    },
+                    {
+                      "type": "STRING",
+                      "value": "CAN-QUERY"
+                    }
+                  ]
+                },
+                "named": false,
+                "value": "CAN-QUERY"
+              },
+              {
+                "type": "ALIAS",
+                "content": {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "STRING",
                       "value": "entry"
                     },
                     {
