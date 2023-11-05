@@ -195,6 +195,7 @@
   "CAN-QUERY"
   "CAN-SET"
   "CAPS"
+  "CAST"
   "ENTRY"
   "FILL"
   "INDEX"

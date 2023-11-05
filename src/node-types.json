@@ -2933,6 +2933,10 @@
     "named": false
   },
   {
+    "type": "CAST",
+    "named": false
+  },
+  {
     "type": "CHARACTER",
     "named": false
   },
