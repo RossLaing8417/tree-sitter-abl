@@ -4590,6 +4590,24 @@
                   "members": [
                     {
                       "type": "STRING",
+                      "value": "chr"
+                    },
+                    {
+                      "type": "STRING",
+                      "value": "CHR"
+                    }
+                  ]
+                },
+                "named": false,
+                "value": "CHR"
+              },
+              {
+                "type": "ALIAS",
+                "content": {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "STRING",
                       "value": "entry"
                     },
                     {

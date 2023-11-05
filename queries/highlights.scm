@@ -196,6 +196,7 @@
   "CAN-SET"
   "CAPS"
   "CAST"
+  "CHR"
   "ENTRY"
   "FILL"
   "INDEX"

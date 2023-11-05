@@ -434,6 +434,7 @@ module.exports = grammar({
             kw("CAN-SET"),
             kw("CAPS"),
             kw("CAST"),
+            kw("CHR"),
             kw("ENTRY"),
             kw("FILL"),
             kw("INDEX"),
@@ -523,6 +524,7 @@ module.exports = grammar({
             $.call_statement,
             $.case_statement,
             $.catch_statement,
+            // TODO: $.choose_statement,
             $.compile_statement,
 
             $.define_buffer_statement,
@@ -661,6 +663,8 @@ module.exports = grammar({
         $._code_block,
         optional(kw("CATCH")),
       ),
+
+    // TODO: choose_statement: $ => seq(kw("CHOOSE")),
 
     compile_statement: $ =>
       seq(
