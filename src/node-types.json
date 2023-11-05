@@ -2917,6 +2917,10 @@
     "named": false
   },
   {
+    "type": "CAN-SET",
+    "named": false
+  },
+  {
     "type": "CASE",
     "named": false
   },

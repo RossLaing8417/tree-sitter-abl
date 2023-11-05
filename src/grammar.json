@@ -4536,6 +4536,24 @@
                   "members": [
                     {
                       "type": "STRING",
+                      "value": "can-set"
+                    },
+                    {
+                      "type": "STRING",
+                      "value": "CAN-SET"
+                    }
+                  ]
+                },
+                "named": false,
+                "value": "CAN-SET"
+              },
+              {
+                "type": "ALIAS",
+                "content": {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "STRING",
                       "value": "entry"
                     },
                     {

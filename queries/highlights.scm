@@ -193,6 +193,7 @@
   "BUFFER-TENANT-NAME"
   "CAN-DO"
   "CAN-QUERY"
+  "CAN-SET"
   "ENTRY"
   "FILL"
   "INDEX"
