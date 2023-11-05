@@ -950,6 +950,10 @@
           "named": true
         },
         {
+          "type": "clear_statement",
+          "named": true
+        },
+        {
           "type": "compile_statement",
           "named": true
         },
@@ -1125,6 +1129,10 @@
           "named": true
         },
         {
+          "type": "clear_statement",
+          "named": true
+        },
+        {
           "type": "compile_statement",
           "named": true
         },
@@ -1226,6 +1234,21 @@
     "children": {
       "multiple": true,
       "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "clear_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
       "types": [
         {
           "type": "identifier",
@@ -1468,6 +1491,10 @@
         },
         {
           "type": "class_statement",
+          "named": true
+        },
+        {
+          "type": "clear_statement",
           "named": true
         },
         {
@@ -1760,6 +1787,10 @@
           "named": true
         },
         {
+          "type": "clear_statement",
+          "named": true
+        },
+        {
           "type": "compile_statement",
           "named": true
         },
@@ -2035,6 +2066,10 @@
         },
         {
           "type": "class_statement",
+          "named": true
+        },
+        {
+          "type": "clear_statement",
           "named": true
         },
         {
@@ -2396,6 +2431,10 @@
         },
         {
           "type": "class_statement",
+          "named": true
+        },
+        {
+          "type": "clear_statement",
           "named": true
         },
         {
@@ -2963,6 +3002,10 @@
     "named": false
   },
   {
+    "type": "ALL",
+    "named": false
+  },
+  {
     "type": "AMBIGUOS",
     "named": false
   },
@@ -3144,6 +3187,10 @@
   },
   {
     "type": "CLASS",
+    "named": false
+  },
+  {
+    "type": "CLEAR",
     "named": false
   },
   {
@@ -3644,6 +3691,10 @@
   },
   {
     "type": "NO-LOCK",
+    "named": false
+  },
+  {
+    "type": "NO-PAUSE",
     "named": false
   },
   {

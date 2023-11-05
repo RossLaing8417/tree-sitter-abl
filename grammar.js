@@ -526,6 +526,7 @@ module.exports = grammar({
             $.catch_statement,
             // TODO: $.choose_statement,
             $.class_statement,
+            $.clear_statement,
             $.compile_statement,
 
             $.define_buffer_statement,
@@ -680,6 +681,14 @@ module.exports = grammar({
         // TODO Class body repeat(choice(...)),
         kw("END"),
         optional(kw("CLASS")),
+      ),
+
+    clear_statement: $ =>
+      seq(
+        kw("CLEAR"),
+        optional(seq(kw("FRAME"), $.identifier)),
+        optional(kw("ALL")),
+        optional(kw("NO-PAUSE")),
       ),
 
     compile_statement: $ =>
