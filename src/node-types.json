@@ -3092,6 +3092,10 @@
     "named": false
   },
   {
+    "type": "APPEND",
+    "named": false
+  },
+  {
     "type": "APPL-ALERT-BOXES",
     "named": false
   },
@@ -3296,6 +3300,10 @@
     "named": false
   },
   {
+    "type": "COMPARE",
+    "named": false
+  },
+  {
     "type": "COMPILE",
     "named": false
   },
@@ -3385,6 +3393,10 @@
   },
   {
     "type": "DEBUG-ALERT",
+    "named": false
+  },
+  {
+    "type": "DEBUG-LIST",
     "named": false
   },
   {
@@ -3656,6 +3668,10 @@
     "named": false
   },
   {
+    "type": "LANGUAGES",
+    "named": false
+  },
+  {
     "type": "LAST",
     "named": false
   },
@@ -3700,6 +3716,10 @@
     "named": false
   },
   {
+    "type": "LISTING",
+    "named": false
+  },
+  {
     "type": "LOCAL-VERSION-INFO",
     "named": false
   },
@@ -3729,6 +3749,10 @@
   },
   {
     "type": "MENU-ITEM",
+    "named": false
+  },
+  {
+    "type": "MIN-SIZE",
     "named": false
   },
   {
@@ -3832,11 +3856,23 @@
     "named": false
   },
   {
+    "type": "OPTIONS-FILE",
+    "named": false
+  },
+  {
     "type": "OR",
     "named": false
   },
   {
     "type": "OUTPUT",
+    "named": false
+  },
+  {
+    "type": "PAGE-SIZE",
+    "named": false
+  },
+  {
+    "type": "PAGE-WIDTH",
     "named": false
   },
   {
@@ -3857,6 +3893,10 @@
   },
   {
     "type": "PIXELS-PER-ROW",
+    "named": false
+  },
+  {
+    "type": "PREPROCESS",
     "named": false
   },
   {
@@ -4084,6 +4124,14 @@
     "named": false
   },
   {
+    "type": "STREAM-IO",
+    "named": false
+  },
+  {
+    "type": "STRING-XREF",
+    "named": false
+  },
+  {
     "type": "SUB-AVERAGE",
     "named": false
   },
@@ -4137,6 +4185,10 @@
   },
   {
     "type": "TEMP-TABLE",
+    "named": false
+  },
+  {
+    "type": "TEXT-SEG-GROW",
     "named": false
   },
   {
@@ -4216,6 +4268,14 @@
     "named": false
   },
   {
+    "type": "USE-REVVIDEO",
+    "named": false
+  },
+  {
+    "type": "USE-UNDERLINE",
+    "named": false
+  },
+  {
     "type": "USE-WIDGET-POOL",
     "named": false
   },
@@ -4229,6 +4289,10 @@
   },
   {
     "type": "V6DISPLAY",
+    "named": false
+  },
+  {
+    "type": "V6FRAME",
     "named": false
   },
   {
@@ -4324,7 +4388,15 @@
     "named": false
   },
   {
+    "type": "XCODE",
+    "named": false
+  },
+  {
     "type": "XML-NODE-NAME",
+    "named": false
+  },
+  {
+    "type": "XREF",
     "named": false
   },
   {

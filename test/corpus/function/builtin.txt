@@ -328,6 +328,26 @@ ASSIGN
           (character_literal))))))
 
 ================================================================================
+Compare
+================================================================================
+
+ASSIGN
+  result = COMPARE(string1, "EQ", string2, "CASE-SENSITIVE").
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (assign_statement
+    (assignment_expression
+      (identifier)
+      (builtin_function
+        (argument_list
+          (identifier)
+          (character_literal)
+          (identifier)
+          (character_literal))))))
+
+================================================================================
 Entry
 ================================================================================
 

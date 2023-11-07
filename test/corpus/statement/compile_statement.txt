@@ -1,0 +1,56 @@
+================================================================================
+Simple Compile Statement
+================================================================================
+
+COMPILE VALUE(variable) SAVE.
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (compile_statement
+    (identifier)))
+
+================================================================================
+Complex Compile Statement
+================================================================================
+
+COMPILE
+  VALUE(source_file)
+  OPTIONS "require-field-qualifiers:Error,require-full-names"
+  OPTIONS-FILE VALUE(options_file)
+  SAVE = TRUE INTO VALUE(rcode_file)
+  LISTING VALUE(listing_file) APPEND = FALSE PAGE-SIZE 55 PAGE-WIDTH 80
+  XREF VALUE(xref_file) APPEND = FALSE
+  XREF-XML VALUE(xrefxml_file)
+  STRING-XREF VALUE(stringxref_file)
+  STREAM-IO = variable
+  LANGUAGES (VALUE("language")) TEXT-SEG-GROW = 123
+  DEBUG-LIST "debug_file"
+  PREPROCESS "preprocess_file"
+  V6FRAME = TRUE USE-UNDERLINE
+  MIN-SIZE
+  NO-ERROR.
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (compile_statement
+    (identifier)
+    (character_literal)
+    (identifier)
+    (true)
+    (identifier)
+    (identifier)
+    (false)
+    (integer_literal)
+    (integer_literal)
+    (identifier)
+    (false)
+    (identifier)
+    (identifier)
+    (identifier)
+    (character_literal)
+    (integer_literal)
+    (character_literal)
+    (character_literal)
+    (true)))

@@ -436,6 +436,7 @@ module.exports = grammar({
             kw("CAST"),
             kw("CHR"),
             kw("CODEPAGE-CONVERT"),
+            kw("COMPARE"),
             kw("ENTRY"),
             kw("FILL"),
             kw("INDEX"),
@@ -530,6 +531,7 @@ module.exports = grammar({
             $.clear_statement,
             $.close_query_statement,
             $.close_stored_procedure_statement,
+            // TODO: $.color_statement,
             $.compile_statement,
 
             $.define_buffer_statement,
@@ -709,25 +711,77 @@ module.exports = grammar({
       seq(
         kw("COMPILE"),
         choice(
+          $.character_literal,
           $._value,
           // TODO: path
         ),
         anyOf(
-          seq(kw("OPTIONS"), $.character_literal),
+          choice(
+            seq(kw("OPTIONS"), $.character_literal),
+            seq(
+              kw("OPTIONS-FILE"),
+              choice($.character_literal, $._value /*TODO: path*/),
+            ),
+          ),
           seq(
             kw("SAVE"),
             optional(seq("=", $._expression)),
-            optional(seq(kw("INTO"), choice($._value))),
+            optional(
+              seq(
+                kw("INTO"),
+                choice($.character_literal, $._value /*TODO: path*/),
+              ),
+            ),
+          ),
+          seq(
+            kw("LISTING"),
+            choice($.character_literal, $._value /*TODO: path*/),
+            anyOf(
+              seq(kw("APPEND"), optional(seq("=", $._expression))),
+              seq(kw("PAGE-SIZE"), $._expression),
+              seq(kw("PAGE-WIDTH"), $._expression),
+            ),
+          ),
+          seq(kw("XCODE"), $._expression),
+          seq(
+            kw("XREF"),
+            choice($.character_literal, $._value /*TODO: path*/),
+            optional(seq(kw("APPEND"), optional(seq("=", $._expression)))),
           ),
           seq(
             kw("XREF-XML"),
-            choice(
-              $._value,
-              //TODO: path
-            ),
+            choice($.character_literal, $._value /*TODO: path*/),
           ),
-          kw("NO-ERROR"),
+          seq(
+            kw("STRING-XREF"),
+            choice($.character_literal, $._value /*TODO: path*/),
+            optional(seq(kw("APPEND"), optional(seq("=", $._expression)))),
+          ),
+          seq(kw("STREAM-IO"), optional(seq("=", $._expression))),
+          seq(
+            kw("LANGUAGES"),
+            "(",
+            choice(/*TODO: language_list,*/ $._value),
+            ")",
+            optional(seq(kw("TEXT-SEG-GROW"), "=", $._expression)),
+          ),
+          seq(
+            kw("DEBUG-LIST"),
+            choice($.character_literal, $._value /*TODO: path*/),
+          ),
+          seq(
+            kw("PREPROCESS"),
+            choice($.character_literal, $._value /*TODO: path*/),
+          ),
+          seq(
+            kw("V6FRAME"),
+            optional(seq("=", $._expression)),
+            optional(kw("USE-REVVIDEO")),
+            optional(kw("USE-UNDERLINE")),
+          ),
+          seq(kw("MIN-SIZE"), optional(seq("=", $._expression))),
         ),
+        optional(kw("NO-ERROR")),
       ),
 
     _save_spec: _ => seq(kw("SAVE"), kw("FALSE")),
