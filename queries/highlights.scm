@@ -254,6 +254,8 @@
   "CLEAR"
   "ALL"
   "NO-PAUSE"
+  "CLOSE"
+  "QUERY"
   "COMPILE"
   "OPTIONS"
   "INTO"

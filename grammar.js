@@ -527,6 +527,7 @@ module.exports = grammar({
             // TODO: $.choose_statement,
             $.class_statement,
             $.clear_statement,
+            $.close_query_statement,
             $.compile_statement,
 
             $.define_buffer_statement,
@@ -690,6 +691,8 @@ module.exports = grammar({
         optional(kw("ALL")),
         optional(kw("NO-PAUSE")),
       ),
+
+    close_query_statement: $ => seq(kw("CLOSE"), kw("QUERY"), $.identifier),
 
     compile_statement: $ =>
       seq(

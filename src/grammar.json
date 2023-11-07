@@ -5328,6 +5328,10 @@
                 },
                 {
                   "type": "SYMBOL",
+                  "name": "close_query_statement"
+                },
+                {
+                  "type": "SYMBOL",
                   "name": "compile_statement"
                 },
                 {
@@ -6998,6 +7002,51 @@
               "type": "BLANK"
             }
           ]
+        }
+      ]
+    },
+    "close_query_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "close"
+              },
+              {
+                "type": "STRING",
+                "value": "CLOSE"
+              }
+            ]
+          },
+          "named": false,
+          "value": "CLOSE"
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "query"
+              },
+              {
+                "type": "STRING",
+                "value": "QUERY"
+              }
+            ]
+          },
+          "named": false,
+          "value": "QUERY"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
         }
       ]
     },
