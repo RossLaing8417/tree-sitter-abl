@@ -3284,6 +3284,10 @@
     "named": false
   },
   {
+    "type": "CODEPAGE-CONVERT",
+    "named": false
+  },
+  {
     "type": "COLUMN-LABEL",
     "named": false
   },

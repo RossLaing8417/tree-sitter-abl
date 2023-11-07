@@ -435,6 +435,7 @@ module.exports = grammar({
             kw("CAPS"),
             kw("CAST"),
             kw("CHR"),
+            kw("CODEPAGE-CONVERT"),
             kw("ENTRY"),
             kw("FILL"),
             kw("INDEX"),

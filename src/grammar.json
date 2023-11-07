@@ -4608,6 +4608,24 @@
                   "members": [
                     {
                       "type": "STRING",
+                      "value": "codepage-convert"
+                    },
+                    {
+                      "type": "STRING",
+                      "value": "CODEPAGE-CONVERT"
+                    }
+                  ]
+                },
+                "named": false,
+                "value": "CODEPAGE-CONVERT"
+              },
+              {
+                "type": "ALIAS",
+                "content": {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "STRING",
                       "value": "entry"
                     },
                     {

@@ -197,6 +197,7 @@
   "CAPS"
   "CAST"
   "CHR"
+  "CODEPAGE-CONVERT"
   "ENTRY"
   "FILL"
   "INDEX"
