@@ -528,6 +528,7 @@ module.exports = grammar({
             $.class_statement,
             $.clear_statement,
             $.close_query_statement,
+            $.close_stored_procedure_statement,
             $.compile_statement,
 
             $.define_buffer_statement,
@@ -693,6 +694,15 @@ module.exports = grammar({
       ),
 
     close_query_statement: $ => seq(kw("CLOSE"), kw("QUERY"), $.identifier),
+
+    close_stored_procedure_statement: $ =>
+      seq(
+        kw("CLOSE"),
+        kw("STORED-PROCEDURE"),
+        $.identifier,
+        optional(seq($.identifier, "=", kw("PROC-STATUS"))),
+        optional(seq(kw("WHERE"), kw("PROC-HANDLE"), "=", $.identifier)),
+      ),
 
     compile_statement: $ =>
       seq(

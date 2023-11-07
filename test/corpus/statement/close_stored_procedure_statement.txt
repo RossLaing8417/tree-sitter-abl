@@ -1,0 +1,24 @@
+================================================================================
+Close Stored Procedure Statement
+================================================================================
+
+CLOSE STORED-PROCEDURE p1.
+CLOSE STORED-PROCEDURE p1 st = PROC-STATUS.
+CLOSE STORED-PROCEDURE p1 st = PROC-STATUS WHERE PROC-HANDLE = h.
+CLOSE STORED-PROCEDURE p1 WHERE PROC-HANDLE = h.
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (close_stored_procedure_statement
+    (identifier))
+  (close_stored_procedure_statement
+    (identifier)
+    (identifier))
+  (close_stored_procedure_statement
+    (identifier)
+    (identifier)
+    (identifier))
+  (close_stored_procedure_statement
+    (identifier)
+    (identifier)))

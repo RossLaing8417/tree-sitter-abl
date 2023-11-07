@@ -5332,6 +5332,10 @@
                 },
                 {
                   "type": "SYMBOL",
+                  "name": "close_stored_procedure_statement"
+                },
+                {
+                  "type": "SYMBOL",
                   "name": "compile_statement"
                 },
                 {
@@ -7047,6 +7051,147 @@
         {
           "type": "SYMBOL",
           "name": "identifier"
+        }
+      ]
+    },
+    "close_stored_procedure_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "close"
+              },
+              {
+                "type": "STRING",
+                "value": "CLOSE"
+              }
+            ]
+          },
+          "named": false,
+          "value": "CLOSE"
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "stored-procedure"
+              },
+              {
+                "type": "STRING",
+                "value": "STORED-PROCEDURE"
+              }
+            ]
+          },
+          "named": false,
+          "value": "STORED-PROCEDURE"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "identifier"
+                },
+                {
+                  "type": "STRING",
+                  "value": "="
+                },
+                {
+                  "type": "ALIAS",
+                  "content": {
+                    "type": "CHOICE",
+                    "members": [
+                      {
+                        "type": "STRING",
+                        "value": "proc-status"
+                      },
+                      {
+                        "type": "STRING",
+                        "value": "PROC-STATUS"
+                      }
+                    ]
+                  },
+                  "named": false,
+                  "value": "PROC-STATUS"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "ALIAS",
+                  "content": {
+                    "type": "CHOICE",
+                    "members": [
+                      {
+                        "type": "STRING",
+                        "value": "where"
+                      },
+                      {
+                        "type": "STRING",
+                        "value": "WHERE"
+                      }
+                    ]
+                  },
+                  "named": false,
+                  "value": "WHERE"
+                },
+                {
+                  "type": "ALIAS",
+                  "content": {
+                    "type": "CHOICE",
+                    "members": [
+                      {
+                        "type": "STRING",
+                        "value": "proc-handle"
+                      },
+                      {
+                        "type": "STRING",
+                        "value": "PROC-HANDLE"
+                      }
+                    ]
+                  },
+                  "named": false,
+                  "value": "PROC-HANDLE"
+                },
+                {
+                  "type": "STRING",
+                  "value": "="
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "identifier"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         }
       ]
     },
